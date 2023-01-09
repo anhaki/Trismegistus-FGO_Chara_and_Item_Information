@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="6dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/bg_border"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_servantFace"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:shapeAppearance="@style/roundedImageView"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_servantFace"
+            android:layout_centerVertical="true"
+            android:paddingTop="8dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_servantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="26sp"
+                android:fontFamily="@font/gowun"
+                android:textColor="@color/black"/>
+
+            <RatingBar
+                android:id="@+id/Rb_Rarity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_servantName"
+                android:layout_marginStart="-38dp"
+                android:scaleX=".7"
+                android:scaleY=".7"
+                android:theme="@style/RatingBar"
+                android:isIndicator="true"
+                android:focusable="false"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

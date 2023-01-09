@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ServantsFragment"
+    android:background="#FFFAEA"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ProgressBar
+        android:id="@+id/pb_data"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="#FFB800"
+        android:elevation="5dp"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_class"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFB800"
+        android:layout_marginTop="-29dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="12dp"
+        android:text="All Class"
+        android:fontFamily="@font/gowun"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="15dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/SV_Kami"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ke_aboutUs"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/info_icon"
+                app:tint="#FFB800"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <Space
+                android:id="@+id/Kosong"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_servants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Kosong"
+                tools:itemCount="20"
+                tools:listitem="@layout/servant_item"
+                android:nestedScrollingEnabled="false"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_menuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:padding="15dp"
+        android:visibility="gone"
+        android:elevation="2dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border"
+            android:padding="15dp"
+            android:elevation="2dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tv_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Display Class"
+                android:layout_marginBottom="10dp"
+                android:textSize="40sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gowun"
+                android:layout_centerHorizontal="true"/>
+
+            <ScrollView
+                android:id="@+id/sv_menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_below="@id/tv_class">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_saber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Saber"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_archer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Archer"
+                        android:layout_below="@id/btn_saber"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_lancer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Lancer"
+                        android:layout_below="@id/btn_archer"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_rider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Rider"
+                        android:layout_below="@id/btn_lancer"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_caster"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Caster"
+                        android:layout_below="@id/btn_rider"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_assassin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Assassin"
+                        android:layout_below="@id/btn_caster"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_berserker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Berserker"
+                        android:layout_below="@id/btn_assassin"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_ruler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Ruler"
+                        android:layout_below="@id/btn_berserker"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_avenger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Avenger"
+                        android:layout_below="@id/btn_ruler"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_moonCancer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Moon Cancer"
+                        android:layout_below="@id/btn_avenger"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_foreigner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Foreigner"
+                        android:layout_below="@id/btn_moonCancer"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_alterEgo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="Alter Ego"
+                        android:layout_below="@id/btn_foreigner"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_allClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gowun"
+                        android:text="All Class"
+                        android:layout_below="@+id/btn_alterEgo"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Close"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/gowun"
+                android:layout_below="@id/sv_menuButton"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#FFB800"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

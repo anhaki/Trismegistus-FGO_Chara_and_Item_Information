@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailCeActivity"
+    android:orientation="vertical"
+    android:background="#FFFAEA">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_ceDetailTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_ceNameDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Name"
+            android:textSize="35sp"
+            android:fontFamily="@font/gowun"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_ceLore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lore"
+            android:textSize="18sp"
+            android:fontFamily="@font/gowun"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_below="@+id/tv_ceNameDetail"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/RV_fc"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_border"
+            android:padding="10dp"
+            android:layout_below="@id/rl_ceDetailTop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_ceDetailFace"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@mipmap/ic_launcher"
+                android:theme="@style/circleImageView"
+                />
+
+        </RelativeLayout>
+
+    <RatingBar
+        android:id="@+id/tv_detailCeRarity"
+        android:layout_below="@id/RV_fc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleX=".8"
+        android:scaleY=".8"
+        android:textSize="18sp"
+        android:theme="@style/RatingBar"
+        android:isIndicator="true"
+        android:focusable="false"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/Rv_HPandAtk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layoutDirection="ltr"
+        android:layout_below="@+id/tv_detailCeRarity"
+        >
+
+        <TextView
+            android:id="@+id/tv_detailCeBaseHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Hp  : 0000"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:fontFamily="@font/gowun"
+            android:textColor="@color/black"
+            android:layout_weight=".50"
+            />
+        <TextView
+            android:id="@+id/tv_detailCeBaseAtk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:text="Atk : 0000"
+            android:textSize="18sp"
+            android:fontFamily="@font/gowun"
+            android:textColor="@color/black"
+            android:layout_weight=".50"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sekil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skills"
+        android:textAllCaps="false"
+        android:backgroundTint="#FFB800"
+        android:layout_below="@+id/Rv_HPandAtk"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:fontFamily="@font/gowun"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_ceDetailBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_border"
+            android:padding="15dp"
+            >
+
+                <RelativeLayout
+                    android:id="@+id/rl_ceSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/Rv_SekilBase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:id="@+id/tv_ceSkillBase"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Skill"
+                            android:textSize="26sp"
+                            android:fontFamily="@font/gowun"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            />
+                        <ImageView
+                            android:id="@+id/iv_ceIconSkillBase"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_below="@id/tv_ceSkillBase"
+                            android:src="@mipmap/ic_launcher"/>
+
+                        <TextView
+                            android:id="@+id/tv_ceSkillBaseDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_ceSkillBase"
+                            android:layout_toEndOf="@id/iv_ceIconSkillBase"
+                            android:text="Skill Base Detail"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/black"
+                            />
+                    </RelativeLayout>
+
+                  <RelativeLayout
+                      android:id="@+id/Rv_SekilMax"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/Rv_SekilBase"
+                      android:layout_marginTop="15dp"
+
+                      >
+                      <TextView
+                          android:id="@+id/tv_ceSkillMax"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="5dp"
+                          android:text="Max Skill"
+                          android:textSize="26sp"
+                          android:fontFamily="@font/gowun"
+                          android:textAlignment="center"
+                          android:textColor="@color/black"
+                          />
+
+                      <ImageView
+                          android:id="@+id/iv_ceIconSkillMax"
+                          android:layout_width="60dp"
+                          android:layout_height="60dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_below="@+id/tv_ceSkillMax"
+                          android:src="@mipmap/ic_launcher"/>
+
+                      <TextView
+                          android:id="@+id/tv_ceSkillMaxDetail"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_toEndOf="@+id/iv_ceIconSkillMax"
+                          android:layout_below="@id/tv_ceSkillMax"
+                          android:text="Max Skill Detail"
+                          android:textSize="18sp"
+                          android:fontFamily="@font/gowun"
+                          android:textColor="@color/black"
+                          />
+                  </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Close"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/gowun"
+                        android:layout_below="@id/Rv_SekilMax"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="#FFB800"
+                        />
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

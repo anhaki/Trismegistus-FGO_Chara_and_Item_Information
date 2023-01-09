@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.DetailServantActivity"
+    android:background="#FFFAEA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_detailServantTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_detailServantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Name"
+            android:textSize="35sp"
+            android:fontFamily="@font/gowun"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/tv_DetailServantClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detailServantName"
+            android:textAlignment="center"
+            android:text="Class: "
+            android:textSize="20sp"
+            android:fontFamily="@font/gowun"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/Rv_HPandAtk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_DetailServantClass"
+            android:layout_centerHorizontal="true"
+            android:layoutDirection="ltr"
+            >
+
+            <TextView
+                android:id="@+id/tv_detailServantBaseHp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Hp  : 0000"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                android:fontFamily="@font/gowun"
+                android:textColor="@color/black"
+                android:layout_weight=".50"
+                />
+            <TextView
+                android:id="@+id/tv_detailServantBaseAtk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:text="Atk : 0000"
+                android:textSize="18sp"
+                android:fontFamily="@font/gowun"
+                android:textColor="@color/black"
+                android:layout_weight=".50"
+                />
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/tv_detailServantRarity"
+            android:layout_below="@+id/Rv_HPandAtk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleX=".8"
+            android:scaleY=".8"
+            android:textSize="18sp"
+            android:theme="@style/RatingBar"
+            android:isIndicator="true"
+            android:focusable="false"
+            />
+    </RelativeLayout>
+<!--============================================================================-->
+
+        <LinearLayout
+            android:id="@+id/ll_IMG"
+            android:layout_width="270dp"
+            android:layout_height="382dp"
+            android:layout_below="@+id/ll_stages"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/img_border"
+            android:gravity="center"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_detailServantFace"
+                android:layout_width="270dp"
+                android:layout_height="400dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="-8dp"
+                android:padding="2dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:visibility="visible"/>
+
+<!--=================================================================================================================-->
+
+            <ScrollView
+                android:id="@+id/sv_profil"
+                android:layout_width="266dp"
+                android:layout_height="match_parent"
+                android:background="#FFFAEA"
+                android:visibility="gone"
+                android:paddingBottom="11dp"
+                android:nestedScrollingEnabled="true"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Story"
+                        android:textSize="28dp"
+                        android:fontFamily="@font/gowun"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_detailServantLore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lore"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/gowun"
+                        android:textColor="@color/black"
+                        android:visibility="visible"
+                        android:padding="10dp"
+                        />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_profil"
+            android:layout_width="270dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/ll_IMG"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-11dp"
+            android:background="@drawable/profile"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_profil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gowun"
+                android:text="Story"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_stages"
+            android:layout_width="270dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/rl_detailServantTop"
+            android:layout_centerHorizontal="true"
+            >
+            <TextView
+                android:id="@+id/tv_stg1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Stage 1"
+                android:layout_weight=".25"
+                android:background="@drawable/stages1_selected"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gowun"
+                />
+
+            <TextView
+                android:id="@+id/tv_stg2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="Stage 2"
+                android:layout_weight=".25"
+                android:gravity="center"
+                android:background="@drawable/stages2"
+                android:fontFamily="@font/gowun"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/tv_stg3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="Stage 3"
+                android:layout_weight=".25"
+                android:gravity="center"
+                android:background="@drawable/stages3"
+                android:fontFamily="@font/gowun"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/tv_stg4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="Stage 4"
+                android:layout_weight=".25"
+                android:gravity="center"
+                android:background="@drawable/stages4"
+                android:fontFamily="@font/gowun"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+        <!--Batas antara image bawahnya-->
+        <LinearLayout
+            android:id="@+id/ll_skillNoble"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/ll_profil"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_skillNya"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Skills"
+                android:textSize="19sp"
+                android:layout_weight=".50"
+                android:background="@drawable/stages1_selected"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gowun"
+                />
+
+            <TextView
+                android:id="@+id/tv_nobleNya"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Noble Phantasm"
+                android:layout_weight=".50"
+                android:gravity="center"
+                android:textSize="19sp"
+                android:background="@drawable/stages4"
+                android:fontFamily="@font/gowun"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_detailServantBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_skillNoble"
+            android:padding="10dp"
+            android:background="#FFB800"
+            >
+
+<!--=================================================================================================================-->
+                    <RelativeLayout
+                        android:id="@+id/rl_skillServant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_judulSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Skills"
+                            android:layout_centerHorizontal="true"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"/>
+                        <RelativeLayout
+                            android:id="@+id/rl_containerSkill1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_judulSkill"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_skill1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="Skill 1"
+                                android:textSize="24sp"
+                                android:fontFamily="@font/gowun"
+                                android:textColor="@color/white"
+                                />
+                            <ImageView
+                                android:id="@+id/iv_iconSkill1"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_below="@id/tv_skill1"
+                                android:src="@mipmap/ic_launcher"/>
+                            <TextView
+                                android:id="@+id/tv_detailSkill1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/iv_iconSkill1"
+                                android:layout_below="@id/tv_skill1"
+                                android:text="Skill 1 Detail"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/gowun"
+                                android:textColor="@color/white"
+                                />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rl_ContainerSkill2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_containerSkill1"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_skill2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Skill 2"
+                                android:textSize="24sp"
+                                android:fontFamily="@font/gowun"
+                                android:textColor="@color/white"
+                                />
+                            <ImageView
+                                android:id="@+id/iv_iconSkill2"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_below="@id/tv_skill2"
+                                android:src="@mipmap/ic_launcher"/>
+                            <TextView
+                                android:id="@+id/tv_detailSkill2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/iv_iconSkill2"
+                                android:layout_below="@id/tv_skill2"
+                                android:text="Skill 2 Detail"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/gowun"
+                                android:textColor="@color/white"
+                                />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rl_containerSkill3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_ContainerSkill2">
+
+                            <TextView
+                                android:id="@+id/tv_skill3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Skill 3"
+                                android:textSize="24sp"
+                                android:fontFamily="@font/gowun"
+                                android:textColor="@color/white"
+                                />
+                            <ImageView
+                                android:id="@+id/iv_iconSkill3"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_below="@id/tv_skill3"
+                                android:src="@mipmap/ic_launcher"/>
+                            <TextView
+                                android:id="@+id/tv_detailSkill3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/iv_iconSkill3"
+                                android:layout_below="@id/tv_skill3"
+                                android:text="Skill 3 Detail"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/gowun"
+                                android:textColor="@color/white"
+                                />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+<!--=================================================================================================================-->
+                    <RelativeLayout
+                        android:id="@+id/rl_npServant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_judulNp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+                            android:layout_centerHorizontal="true"
+                            android:textAlignment="center"
+                            android:text="Noble Phantasm"
+                            android:textSize="32sp"/>
+                        <TextView
+                            android:id="@+id/tv_npName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_judulNp"
+                            android:layout_marginTop="10dp"
+                            android:text="Noble Phantasm Name"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"/>
+                        <TextView
+                            android:id="@+id/tv_npRank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_npName"
+                            android:layout_marginTop="8dp"
+                            android:text="Rank\t\t\t\t\t: A"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:id="@+id/tv_npClass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_npRank"
+                            android:text="Class\t\t\t\t\t: Anti-Personel"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:id="@+id/tv_npType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_npClass"
+                            android:text="NP Type\t: AOE Damage"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:id="@+id/tv_npCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_npType"
+                            android:text="NP Card\t\t: Buster"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:id="@+id/tv_npDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_npCard"
+                            android:layout_marginTop="8dp"
+                            android:text="Detail NP"
+                            android:fontFamily="@font/gowun"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"/>
+
+                    </RelativeLayout>
+<!--=================================================================================================================-->
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
